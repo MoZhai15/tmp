@@ -142,6 +142,7 @@ void boot_first_core(uint64_t mhartid, uintptr_t _dtb)
     xemacps_config.BaseAddress =
         (uintptr_t)ioremap((uint64_t)ethernet_addr, 9 * NORMAL_PAGE_SIZE);
 	xemacps_config.BaseAddress += 0x8000;
+		
     uintptr_t _plic_addr =
         (uintptr_t)ioremap((uint64_t)plic_addr, 0x4000*NORMAL_PAGE_SIZE);
     // XPS_SYS_CTRL_BASEADDR = slcr_bade_addr;
